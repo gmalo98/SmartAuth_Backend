@@ -199,7 +199,7 @@ exports.resendOTP=catchAsync(async(req,res,next)=>{
 exports.logout=catchAsync(async(req,res,next)=>{
     res.clearCookie("token", {
   httpOnly: true,
-  sameSite: "Lax",
+  sameSite: "none",
   secure: true, // if using https
 });
 
